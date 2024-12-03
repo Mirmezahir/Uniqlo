@@ -1,7 +1,7 @@
 ﻿@using Uniqlo_New.ViewModels.Product
 @model ProductCreateVM
 @{
-    ViewData["Title"] = "Create";
+	ViewData["Title"] = "Create";
 }
 <div class="card shadow mb-4">
 	<div class="card-header py-3">
@@ -66,12 +66,12 @@
 						<option selected disabled>Select Category</option>
 						@* @foreach(var item in ViewBag.Categories)
 						{
-							<option value="item.Id">@item.Name</option>
+						<option value="item.Id">@item.Name</option>
 						} *@
 					</select>
 					<span asp-validation-for="CategoryId" class="text-small text-danger"></span>
 				</div>
-				
+
 			</div>
 
 
@@ -79,6 +79,7 @@
 		</form>
 
 	</div>
+</div>
 
 
-	
+

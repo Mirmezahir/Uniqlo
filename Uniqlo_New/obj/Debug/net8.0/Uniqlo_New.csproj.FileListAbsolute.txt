@@ -255,3 +255,9 @@ C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\obj\Debug\net8.0\refint\Uniql
 C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\obj\Debug\net8.0\Uniqlo_New.pdb
 C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\obj\Debug\net8.0\Uniqlo_New.genruntimeconfig.cache
 C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\obj\Debug\net8.0\ref\Uniqlo_New.dll
+C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\obj\Debug\net8.0\Uniqlo_New.sourcelink.json
+C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\HUAWEI\source\repos\Uniqlo_New\Uniqlo_New\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
