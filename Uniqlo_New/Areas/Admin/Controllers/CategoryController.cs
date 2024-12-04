@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Uniqlo_New.DataAccess;
 using Uniqlo_New.Models;
@@ -7,6 +8,7 @@ using Uniqlo_New.ViewModels.Categories;
 namespace Uniqlo_New.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	[Authorize]
 	public class Category(UniqloDBContextBp215 _context) : Controller
 	{
 		public async Task<IActionResult> Index()
