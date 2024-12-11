@@ -1,6 +1,8 @@
 ﻿@using Uniqlo_New.ViewModels.Common
 @model HomeVM 
-
+@{
+    ViewData["Title"] = "Uniqlo";
+}
 <!-- Start Slider Area -->
 <div class="slider__container slider--one">
     <div class="slider__activation__wrap owl-carousel owl-theme">
@@ -56,7 +58,7 @@
                         <div class="product foo">
                             <div class="product__inner">
                                 <div class="pro__thumb">
-                                    <a href="#">
+                                    <a asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">
                                         <img src="~/imgs/products/@item.ImageUrl" alt="product images">
                                     </a>
                                 </div>
@@ -71,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="product__details">
-                                <h2><a href="product-details.html">@item.Name</a></h2>
+                                <h2><a asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">@item.Name</a></h2>
                                 @if (item.IsInStock)
                                 {
                                     if (item.Discount > 0)

@@ -33,5 +33,9 @@ namespace Uniqlo_New.Controllers
 			
             return View(vm);
         }
+        public IActionResult AccesDenied()
+        {
+            return View();
+        }
     }
 }

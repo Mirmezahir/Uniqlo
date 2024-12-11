@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Uniqlo_New.DataAccess;
+using Uniqlo_New.Enums;
 using Uniqlo_New.Extensions;
 using Uniqlo_New.Models;
 using Uniqlo_New.ViewModels.Product;
@@ -9,7 +10,7 @@ using Uniqlo_New.ViewModels.Product;
 namespace Uniqlo_New.Areas.Admin.Controllers
 {
 		[Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = nameof(Roles.Admin))]
     public class ProductController(IWebHostEnvironment _env, UniqloDBContextBp215 _context) : Controller
 	{
 		public async Task<IActionResult> Index()
@@ -28,16 +29,16 @@ namespace Uniqlo_New.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Create(ProductCreateVM vm)
 		{
-			if (vm.OtherFiles!=null && vm.OtherFiles.Any())
-			{
-				if (!vm.OtherFiles.All(x=>x.IsValidType("image")))
-				{
-					var filenames =vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName);
-					ModelState.AddModelError("OtherFiles", string.Join(", ", filenames)+"are is not an image");
-					string.Join(", ", filenames);	
-				}
+			//if (vm.OtherFiles!=null && vm.OtherFiles.Any())
+			//{
+			//	if (!vm.OtherFiles.All(x=>x.IsValidType("image")))
+			//	{
+			//		var filenames =vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName);
+			//		ModelState.AddModelError("OtherFiles", string.Join(", ", filenames)+"are is not an image");
+			//		string.Join(", ", filenames);	
+			//	}
 
-			}
+			//}
 			if (vm.CoverFile != null)
 			{
 				if (vm.CoverFile.IsValidType("image")==false)

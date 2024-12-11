@@ -9,6 +9,9 @@ namespace Uniqlo_New.DataAccess
         public DbSet<Sliders> Slider { get; set; }
         public DbSet<Category> Categories { get; set; }
 		public DbSet<Product> Products { get; set; }
+		public DbSet<Tag> Tags { get; set; }
+		public DbSet<ProductRating> ProductRatings { get; set; }
+
 		public DbSet<ProductImage> ProductImages { get; set; }
 
         public UniqloDBContextBp215(DbContextOptions<UniqloDBContextBp215> opt) : base(opt) { }

@@ -2,13 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Uniqlo_New.DataAccess;
+using Uniqlo_New.Enums;
 using Uniqlo_New.Models;
 using Uniqlo_New.ViewModels.Slider;
 
 namespace Uniqlo_New.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = nameof(Roles.Admin))]
     public class SliderController(UniqloDBContextBp215 _context,IWebHostEnvironment _env) : Controller
     {
         public async Task<IActionResult> Index()
@@ -43,7 +44,7 @@ namespace Uniqlo_New.Areas.Admin.Controllers
             };
             await _context.Slider.AddAsync(slider);
             await _context.SaveChangesAsync();
-            return Ok("Yarandi");
+            return RedirectToAction(nameof(Index));
 
 
           
@@ -63,6 +64,33 @@ namespace Uniqlo_New.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
 
 			return RedirectToAction(nameof(Index));
+		}
+        [HttpGet]
+        public async Task<IActionResult> Update(int?id)
+        {
+            var data = await _context.Slider.FindAsync(id);
+            if (data == null) { return BadRequest(); }
+            SliderUpdateVM vm = new SliderUpdateVM();
+            vm.Subtitle = data.Subtitle;
+            vm.Title = data.Title;  
+            vm.ImageUrl = data.ImageUrl;
+            vm.Link = data.Link;
+            return View(vm);
+            
+        }
+        [HttpPost]
+		public async Task<IActionResult> Update(SliderUpdateVM vm,int? id)
+		{
+           var data =await _context.Slider.FindAsync(id);
+            data.Subtitle = vm.Subtitle;
+            data.Title = vm.Title;
+            data.ImageUrl = vm.ImageUrl;
+            data.Link = vm.Link;
+           await _context.SaveChangesAsync();
+            
+		
+			return RedirectToAction(nameof(Index));
+
 		}
 
 	}

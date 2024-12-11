@@ -6,5 +6,7 @@ namespace Uniqlo_New.Models
 	{
 		public string Fullname { get; set; }
 		public string ProfileImageUrl { get; set; }
+
+		
 	}
 }

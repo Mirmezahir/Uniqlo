@@ -19,7 +19,7 @@ namespace Uniqlo_New.ViewModels.Product
 		public int Discount { get; set; }
 		[Required(ErrorMessage = "Must be fill")]
 		public IFormFile CoverFile { get; set; } 
-		public IEnumerable<IFormFile> OtherFiles { get; set; }
+		public IEnumerable<IFormFile>? OtherFiles { get; set; }
 		[Required(ErrorMessage = "Must be fill")]
 		public int? CategoryId { get; set; }
 		

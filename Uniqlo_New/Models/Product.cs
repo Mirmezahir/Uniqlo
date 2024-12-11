@@ -16,9 +16,11 @@ namespace Uniqlo_New.Models
 		public int?  CategoryId { get; set; }
 		public Category? Category { get; set; }
 		public IEnumerable<Product>? Images { get; set; }
+		public IEnumerable<ProductRating>? Ratings { get; set; }
+        public  ICollection<Tag>? Tags { get; set; }
 
-		public static implicit operator Product(ProductCreateVM vm)
-		{
+        public static implicit operator Product(ProductCreateVM vm)
+	 	{
 			return new Product
 			{ 
 				Name = vm.Name,
