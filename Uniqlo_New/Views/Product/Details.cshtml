@@ -115,9 +115,10 @@
                         </div>
                     </div>
                     <ul class="pro__dtl__btn">
-                        <li class="buy__now__btn"><a href="#">buy now</a></li>
+                        <li class="buy__now__btn"><a href="#">Buy Now</a></li>
+                        <li ><a href="#"><span class="ti-shopping-cart-full"></span></a></li>
                         <li><a href="#"><span class="ti-heart"></span></a></li>
-                        <li><a href="#"><span class="ti-email"></span></a></li>
+                        
                     </ul>
                     <div class="pro__social__share">
                         <h2>Share :</h2>
@@ -143,11 +144,9 @@
                     <li role="presentation" class="active">
                         <a class="active" href="#description" role="tab" data-bs-toggle="tab">Description</a>
                     </li>
+                    
                     <li role="presentation">
-                        <a href="#sheet" role="tab" data-bs-toggle="tab">Data sheet</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#reviews" role="tab" data-bs-toggle="tab">Reviews</a>
+                        <a href="#reviews" role="tab" data-bs-toggle="tab">Commentler</a>
                     </li>
                 </ul>
             </div>
@@ -162,63 +161,35 @@
                                 <h2 class="title__6">Details</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noexercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
                             </div>
-                            <div class="pro__feature">
-                                <h2 class="title__6">Features</h2>
-                                <ul class="feature__list">
-                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit esse</a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Irure dolor in reprehenderit in voluptate velit esse</a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Sed do eiusmod tempor incididunt ut labore et </a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Nisi ut aliquip ex ea commodo consequat.</a></li>
-                                </ul>
-                            </div>
+                           
                         </div>
                     </div>
                     <!-- End Single Content -->
                     <!-- Start Single Content -->
-                    <div role="tabpanel" id="sheet" class="product__tab__content">
-                        <div class="pro__feature">
-                            <h2 class="title__6">Data sheet</h2>
-                            <ul class="feature__list">
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit esse</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Irure dolor in reprehenderit in voluptate velit esse</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Irure dolor in reprehenderit in voluptate velit esse</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Sed do eiusmod tempor incididunt ut labore et </a></li>
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Sed do eiusmod tempor incididunt ut labore et </a></li>
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Nisi ut aliquip ex ea commodo consequat.</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Nisi ut aliquip ex ea commodo consequat.</a></li>
-                            </ul>
-                        </div>
-                    </div>
+               
                     <!-- End Single Content -->
                     <!-- Start Single Content -->
                     <div role="tabpanel" id="reviews" class="product__tab__content">
                         <div class="review__address__inner">
                             <!-- Start Single Review -->
+                            @foreach (var item in ViewBag.Comments)
+                            {
                             <div class="pro__review">
                                 <div class="review__thumb">
-                                    <img src="~/assets/images/review/1.jpg" alt="review images">
+                                    <img width="100px" src="~/imgs/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="review images">
                                 </div>
                                 <div class="review__details">
                                     <div class="review__info">
-                                        <h4><a href="#">Gerald Barnes</a></h4>
-                                        <ul class="rating">
-                                            <li><i class="zmdi zmdi-star"></i></li>
-                                            <li><i class="zmdi zmdi-star"></i></li>
-                                            <li><i class="zmdi zmdi-star"></i></li>
-                                            <li><i class="zmdi zmdi-star-half"></i></li>
-                                            <li><i class="zmdi zmdi-star-half"></i></li>
-                                        </ul>
-                                        <div class="rating__send">
-                                            <a href="#"><i class="zmdi zmdi-mail-reply"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-close"></i></a>
-                                        </div>
+                                        <h4><a href="#">@item.Name</a></h4>
+                                        
+                                      
                                     </div>
-                                    <div class="review__date">
-                                        <span>27 Jun, 2022 at 2:30pm</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at estei to bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.</p>
+                                   
+                                    <p>@item.Comment</p>
                                 </div>
                             </div>
+                                
+                            }
                      
                           
                            
@@ -230,9 +201,12 @@
                             {
                                 
                                <form id="review-form" method="get">
+                                   
                                    <div class="single-review-form">
                                        <div class="review-box message">
+                                         
                                             <input name="productId" value="@Model.Id" type="hidden">
+                                            <input name="name" value="@ViewBag.Username" type="hidden">
                                            <textarea name="comment" placeholder="Write your review"></textarea>
                                        </div>
                                    </div>

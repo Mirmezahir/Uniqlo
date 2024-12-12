@@ -22,13 +22,17 @@ namespace Uniqlo_New.Controllers
 			var data = await _contex.Products.Where(x=> x.Id == id .Value && !x.IsDeleted).Include(x=> x.Images).Include(x=>x.Ratings).ThenInclude(x=>x.User).FirstOrDefaultAsync();
 			if (data == null) return NotFound();
 			ViewBag.Rating = 5;
+			
+			
 			if (User.Identity?.IsAuthenticated ?? false)
 			{
-				string userId = User.Claims.FirstOrDefault(x=> x.Type== ClaimTypes.NameIdentifier)!.Value;
+		    	string userId = User.Claims.FirstOrDefault(x=> x.Type== ClaimTypes.NameIdentifier)!.Value;
+			ViewBag.Username=	await _contex.Users.Where(x => x.Id == userId).FirstOrDefaultAsync();
 			  int rating =	await _contex.ProductRatings.Where(x=> x.UserId== userId && x.ProductId == id).Select(x=> x.Rating).FirstOrDefaultAsync();
 				ViewBag.Rating = rating == 0 ? 5 : rating; 
 			}
-			ViewBag.Comments = await _contex.ProductComments.ToListAsync();
+			
+			ViewBag.Comments = await _contex.ProductComments.Where(x => x.ProductId == id).ToListAsync(); ;
 			return View(data);
 		}
 		public async Task<IActionResult> Rating(int productId,int rating)
@@ -52,14 +56,15 @@ namespace Uniqlo_New.Controllers
 			await _contex.SaveChangesAsync();
 			return RedirectToAction(nameof(Details), new {Id = productId });
 		}
-		public async Task<IActionResult> Comment(int productId,string comment)
+		public async Task<IActionResult> Comment(int productId,string comment,string name)
 		{
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
 			var data = await _contex.ProductComments.Where(x=> x.UserId==userId&& x.ProductId==productId).FirstOrDefaultAsync();
 			await _contex.ProductComments.AddAsync(new Models.ProductComment { 
 			UserId=userId,
 			Comment = comment,
-			ProductId=productId
+			ProductId=productId,
+			Name = name	
 			});
 			await _contex.SaveChangesAsync();
 
