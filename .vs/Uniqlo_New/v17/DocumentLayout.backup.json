@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\dataaccess\\uniqlodbcontextbp215.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\dataaccess\\uniqlodbcontextbp215.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\views\\account\\checkgmail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\views\\account\\checkgmail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\viewmodels\\auths\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\viewmodels\\auths\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|c:\\users\\huawei\\source\\repos\\uniqlo_new\\uniqlo_new\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A64BDE7D-9C49-49A5-B681-538530C677FE}|Uniqlo_New\\Uniqlo_New.csproj|solutionrelative:uniqlo_new\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +26,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Uniqlo_New\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Models\\Product.cs",
+              "RelativeToolTip": "Uniqlo_New\\Models\\Product.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA5wBMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T14:45:06.33Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -51,92 +53,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Uniqlo_New\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\Register.cshtml*",
-              "RelativeToolTip": "Uniqlo_New\\Views\\Account\\Register.cshtml*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAiwCoAAAAiAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "Uniqlo_New\\Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Product\\Details.cshtml*",
+              "RelativeToolTip": "Uniqlo_New\\Views\\Product\\Details.cshtml*",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAAOsAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T19:37:51.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Uniqlo_New\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Uniqlo_New\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T19:27:31.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CheckGmail.cshtml",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\CheckGmail.cshtml",
-              "RelativeDocumentMoniker": "Uniqlo_New\\Views\\Account\\CheckGmail.cshtml",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\CheckGmail.cshtml",
-              "RelativeToolTip": "Uniqlo_New\\Views\\Account\\CheckGmail.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T19:04:42.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Uniqlo_New\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Uniqlo_New\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T15:07:08.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "Uniqlo_New\\Views\\Account\\ResetPassword.cshtml",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeToolTip": "Uniqlo_New\\Views\\Account\\ResetPassword.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAwCsAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T15:06:58.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResetPasswordVM.cs",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\ViewModels\\Auths\\ResetPasswordVM.cs",
-              "RelativeDocumentMoniker": "Uniqlo_New\\ViewModels\\Auths\\ResetPasswordVM.cs",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\ViewModels\\Auths\\ResetPasswordVM.cs",
-              "RelativeToolTip": "Uniqlo_New\\ViewModels\\Auths\\ResetPasswordVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:56:41.463Z",
+              "WhenOpened": "2024-12-12T14:54:43.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Uniqlo_New\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Uniqlo_New\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswCQAAAAvAAAAAAAAAA==",
+              "Title": "UniqloDBContextBp215.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\DataAccess\\UniqloDBContextBp215.cs",
+              "RelativeDocumentMoniker": "Uniqlo_New\\DataAccess\\UniqloDBContextBp215.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\DataAccess\\UniqloDBContextBp215.cs",
+              "RelativeToolTip": "Uniqlo_New\\DataAccess\\UniqloDBContextBp215.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T07:22:11.197Z",
+              "WhenOpened": "2024-12-12T14:47:37.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Uniqlo_New\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Uniqlo_New\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAmwDcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T14:42:49.111Z",
               "EditorCaption": ""
             }
           ]

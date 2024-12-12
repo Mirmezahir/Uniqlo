@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Uniqlo_New.DataAccess;
 using Uniqlo_New.Migrations;
+using Uniqlo_New.Models;
 
 namespace Uniqlo_New.Controllers
 {
@@ -27,7 +28,7 @@ namespace Uniqlo_New.Controllers
 			  int rating =	await _contex.ProductRatings.Where(x=> x.UserId== userId && x.ProductId == id).Select(x=> x.Rating).FirstOrDefaultAsync();
 				ViewBag.Rating = rating == 0 ? 5 : rating; 
 			}
-
+			ViewBag.Comments = await _contex.ProductComments.ToListAsync();
 			return View(data);
 		}
 		public async Task<IActionResult> Rating(int productId,int rating)
@@ -50,6 +51,20 @@ namespace Uniqlo_New.Controllers
 			}
 			await _contex.SaveChangesAsync();
 			return RedirectToAction(nameof(Details), new {Id = productId });
+		}
+		public async Task<IActionResult> Comment(int productId,string comment)
+		{
+            string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
+			var data = await _contex.ProductComments.Where(x=> x.UserId==userId&& x.ProductId==productId).FirstOrDefaultAsync();
+			await _contex.ProductComments.AddAsync(new Models.ProductComment { 
+			UserId=userId,
+			Comment = comment,
+			ProductId=productId
+			});
+			await _contex.SaveChangesAsync();
+
+
+			return RedirectToAction(nameof(Details), new { Id = productId });
 		}
 	}
 }

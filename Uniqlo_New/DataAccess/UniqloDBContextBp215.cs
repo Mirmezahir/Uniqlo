@@ -13,6 +13,7 @@ namespace Uniqlo_New.DataAccess
 		public DbSet<ProductRating> ProductRatings { get; set; }
 
 		public DbSet<ProductImage> ProductImages { get; set; }
+		public DbSet<ProductComment> ProductComments { get; set; }
 
         public UniqloDBContextBp215(DbContextOptions<UniqloDBContextBp215> opt) : base(opt) { }
 	}
