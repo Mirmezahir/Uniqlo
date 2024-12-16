@@ -1,233 +1,251 @@
 ﻿@using Uniqlo_New.Models
 @model Product
 @{
-    ViewData["Title"] = Model.Name;
-    var rating = Model.Ratings.Count() > 0 ? Model.Ratings.Average(x => x.Rating) : 0;
+	ViewData["Title"] = Model.Name;
+	var rating = Model.Ratings.Count() > 0 ? Model.Ratings.Average(x => x.Rating) : 0;
 }
 
 
 
 <!-- Start Bradcaump area -->
 <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
-    <div class="ht__bradcaump__wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bradcaump__inner text-center">
-                        <h2 class="bradcaump-title">Product Details</h2>
-                        <nav class="bradcaump-inner">
-                            <a class="breadcrumb-item" asp-action="Index" asp-controller="Home">Home</a>
-                            <span class="brd-separetor">/</span>
-                            <span class="breadcrumb-item active">Product Details</span>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="ht__bradcaump__wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bradcaump__inner text-center">
+						<h2 class="bradcaump-title">Product Details</h2>
+						<nav class="bradcaump-inner">
+							<a class="breadcrumb-item" asp-action="Index" asp-controller="Home">Home</a>
+							<span class="brd-separetor">/</span>
+							<span class="breadcrumb-item active">Product Details</span>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- End Bradcaump area -->
 <!-- Start Product Details -->
 <section class="htc__product__details pt--120 pb--100 bg__white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-6 col-sm-12">
-                <div class="product__details__container">
-                    <!-- Start Small images -->
-                    <div class="product__big__images">
-                        <div class="portfolio-full-image tab-content">
-                            <div role="tabpanel" class="tab-pane active" >
-                                <img width="360px"  src="~/imgs/products/@Model.CoverImage" alt="full-image">
-                            </div>
-                         
-                        </div>
-                    </div>
-                    <ul class="nav product__small__images" role="tablist">
-                        <li role="presentation" class="pot-small-img">
-                            <a class="active" href="#img-tab" role="tab" data-bs-toggle="tab">
-                                <img src="~/imgs/products/@Model.CoverImage" alt="small-image">
-                            </a>
-                        </li>
-                      @*   @foreach (var item in Model.Images?.Select(x=>x.Images) ?? [])
-                        {
-                        <li role="presentation" class="pot-small-img">
-                            <a class="active" href="#img-tab" role="tab" data-bs-toggle="tab">
-                                <img src="~/images/products/@item" alt="small-image">
-                            </a>
-                        </li>
-                            
-                        } *@
-                      
-                    </ul>
-                    <!-- End Small images -->
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-sm-12 smt-30 xmt-30">
-                <div class="htc__product__details__inner">
-                    <div class="pro__detl__title">
-                        <h2>@Model.Name</h2>
-                    </div> 
-                    <form asp-action="Rating" method="get">
-                            <input name="productId" value="@Model.Id" type="hidden">
-                            <input name="rating" value="@ViewBag.Rating" type="number" min="1" max="5">
-                            <button class="btn btn-link">Rate</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-6 col-sm-12">
+				<div class="product__details__container">
+					<!-- Start Small images -->
+					<ul class="nav product__small__images" role="tablist">
+						<li role="presentation" class="pot-small-img">
+							<a class="active" href="#img-tab" role="tab" data-bs-toggle="tab">
+								<img width="100px" src="~/imgs/products/@Model.CoverImage" alt="small-image">
+							</a>
+						</li>
+						@foreach (var item in Model.Images?.Select(x => x.FileUrl) ?? [])
+						{
+							<div class="small__images__m">
+							<li role="presentation" class="pot-small-img">
+								<a class="active" href="#img-tab" role="tab" data-bs-toggle="tab">
+									<img width="100px" src="~/imgs/products/@item" alt="small-image">
+								</a>
+							</li>
 
-                        </form>
-                    
-                    <div class="pro__dtl__rating">
-                        <ul class="pro__rating">
-                            @for (int i = 0; i < Math.Ceiling(rating); i++)
-                            {
-                              <li><span class="ti-star"></span></li>
-                                
-                            }
-                            (@rating)
-                        </ul>
-                        <span class="rat__qun">(Based on @Model.Ratings.Count() Ratings)</span>
-                    </div>
-                    <div class="pro__details">
-                    <ul class="pro__dtl__prize">
-                        @if (Model.Discount > 0)
-                        {
-                         <li class="old__prize">$@Model.SellPrice</li>
-                            <li>$@(Model.SellPrice*(100-Model.Discount)/100)</li>
+					        </div>
 
-                        }
-                        else
-                        {
-                            <li>$@Model.SellPrice</li>
-                        }
-                    </ul>
-                        <p>@Model.Description</p>
-                    </div>
-                   
-                    
-                    <div class="product-action-wrap">
-                        <div class="prodict-statas"><span>Quantity :</span></div>
-                        <div class="product-quantity">
-                            <form id='myform' method='POST' action='#'>
-                                <div class="product-quantity">
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <ul class="pro__dtl__btn">
-                        <li class="buy__now__btn"><a href="#">Buy Now</a></li>
-                        <li ><a href="#"><span class="ti-shopping-cart-full"></span></a></li>
-                        <li><a href="#"><span class="ti-heart"></span></a></li>
-                        
-                    </ul>
-                    <div class="pro__social__share">
-                        <h2>Share :</h2>
-                        <ul class="pro__soaial__link">
-                            <li><a href="https://twitter.com/devitemsllc" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/devitems/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
-                            <li><a href="https://www.facebook.com/devitems/?ref=bookmarks" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
-                            <li><a href="https://plus.google.com/" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+						}
+
+				</ul>
+				<div class="product__big__images">
+					<div class="portfolio-full-image tab-content">
+						<div role="tabpanel" class="tab-pane active">
+							<img width="500px" src="~/imgs/products/@Model.CoverImage" alt="full-image">
+						</div>
+
+					</div>
+				</div>
+				<!-- End Small images -->
+			</div>
+		</div>
+		<div class="col-md-12 col-lg-6 col-sm-12 smt-30 xmt-30">
+			<div class="htc__product__details__inner">
+				<div class="pro__detl__title">
+					<h2>@Model.Name</h2>
+				</div>
+					@if (User.Identity.IsAuthenticated)
+					{
+					<form asp-action="Rating" method="get">
+						<input name="productId" value="@Model.Id" type="hidden">
+
+						<div data-mdb-input-init class="form-outline" style="width: 4rem;">
+							<input name="rating" value="@ViewBag.Rating" min="1" max="5" type="number" class="form-control" />
+
+						</div>
+
+						<button type="submit" class="btn btn-primary"
+								style="--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+							Rate
+						</button>
+
+					</form>
+
+					}
+
+				<div class="pro__dtl__rating">
+					<ul class="pro__rating">
+							@for (int i = 0; i < Math.Ceiling(rating); i++)
+							{
+							<li><span class="ti-star"></span></li>
+
+							}
+						(@Math.Ceiling(rating))
+					</ul>
+					<span class="rat__qun">(Based on @Model.Ratings.Count() Ratings)</span>
+				</div>
+				<div class="pro__details">
+					<ul class="pro__dtl__prize">
+							@if (Model.Discount > 0)
+							{
+							<li class="old__prize">$@Model.SellPrice</li>
+							<li>$@(Model.SellPrice * (100 - Model.Discount) / 100)</li>
+
+							}
+							else
+							{
+							<li>$@Model.SellPrice</li>
+							}
+					</ul>
+					<p>@Model.Description</p>
+				</div>
+
+
+				<div class="product-action-wrap">
+					<div class="prodict-statas"><span>Quantity :</span></div>
+					<div class="product-quantity">
+						<form id='myform' method='POST' action='#'>
+							<div class="product-quantity">
+								<div class="cart-plus-minus">
+									<input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<ul class="pro__dtl__btn">
+					<li class="buy__now__btn"><a href="#">Buy Now</a></li>
+					<li><a href="#"><span class="ti-shopping-cart-full"></span></a></li>
+					<li><a href="#"><span class="ti-heart"></span></a></li>
+
+				</ul>
+				<div class="pro__social__share">
+					<h2>Share :</h2>
+					<ul class="pro__soaial__link">
+						<li><a href="https://twitter.com/devitemsllc" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/devitems/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
+						<li><a href="https://www.facebook.com/devitems/?ref=bookmarks" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
+						<li><a href="https://plus.google.com/" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 </section>
 <!-- End Product Details -->
 <!-- Start Product tab -->
 <section class="htc__product__details__tab bg__white pb--120">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12">
-                <ul class="nav product__deatils__tab mb--60" role="tablist">
-                    <li role="presentation" class="active">
-                        <a class="active" href="#description" role="tab" data-bs-toggle="tab">Description</a>
-                    </li>
-                    
-                    <li role="presentation">
-                        <a href="#reviews" role="tab" data-bs-toggle="tab">Commentler</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="product__details__tab__content">
-                    <!-- Start Single Content -->
-                    <div role="tabpanel" id="description" class="product__tab__content active">
-                        <div class="product__description__wrap">
-                            <div class="product__desc">
-                                <h2 class="title__6">Details</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noexercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <!-- End Single Content -->
-                    <!-- Start Single Content -->
-               
-                    <!-- End Single Content -->
-                    <!-- Start Single Content -->
-                    <div role="tabpanel" id="reviews" class="product__tab__content">
-                        <div class="review__address__inner">
-                            <!-- Start Single Review -->
-                            @foreach (var item in ViewBag.Comments)
-                            {
-                            <div class="pro__review">
-                                <div class="review__thumb">
-                                    <img width="100px" src="~/imgs/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="review images">
-                                </div>
-                                <div class="review__details">
-                                    <div class="review__info">
-                                        <h4><a href="#">@item.Name</a></h4>
-                                        
-                                      
-                                    </div>
-                                   
-                                    <p>@item.Comment</p>
-                                </div>
-                            </div>
-                                
-                            }
-                     
-                          
-                           
-                           
-                        </div>
-                       
-                        <div class="review__box">
-                            @if (User.Identity.IsAuthenticated)
-                            {
-                                
-                               <form id="review-form" method="get">
-                                   
-                                   <div class="single-review-form">
-                                       <div class="review-box message">
-                                         
-                                            <input name="productId" value="@Model.Id" type="hidden">
-                                            <input name="name" value="@ViewBag.Username" type="hidden">
-                                           <textarea name="comment" placeholder="Write your review"></textarea>
-                                       </div>
-                                   </div>
-                                   <div class="review-btn">
-                                       <button class="fv-btn" asp-action="Comment" asp-route-id="@Model.Id">Yorum elave et</button>
-                                   </div>
-                               </form>
-                            }
-                        </div>
-                    </div>
-                    <!-- End Single Content -->
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-sm-12">
+				<ul class="nav product__deatils__tab mb--60" role="tablist">
+					<li role="presentation" class="active">
+						<a class="active" href="#description" role="tab" data-bs-toggle="tab">Description</a>
+					</li>
+
+					<li role="presentation">
+						<a href="#reviews" role="tab" data-bs-toggle="tab">Commentler</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="product__details__tab__content">
+					<!-- Start Single Content -->
+					<div role="tabpanel" id="description" class="product__tab__content active">
+						<div class="product__description__wrap">
+							<div class="product__desc">
+								<h2 class="title__6">Details</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noexercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
+							</div>
+
+						</div>
+					</div>
+					<!-- End Single Content -->
+					<!-- Start Single Content -->
+					<!-- End Single Content -->
+					<!-- Start Single Content -->
+					<div role="tabpanel" id="reviews" class="product__tab__content">
+						<div class="review__address__inner">
+							<!-- Start Single Review -->
+							@foreach (var item in ViewBag.Comments)
+							{
+								<div class="pro__review">
+									<div class="review__thumb">
+										<img width="100px" src="~/imgs/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="review images">
+									</div>
+									<div class="review__details">
+										<div class="review__info">
+											<h4><a href="#">@item.Name</a></h4>
+
+
+										</div>
+
+										<p>@item.Comment</p>
+									</div>
+								</div>
+
+							}
+
+
+
+
+						</div>
+
+						<div class="review__box">
+							@if (User.Identity.IsAuthenticated)
+							{
+
+								<form id="review-form" method="get">
+
+									<div class="single-review-form">
+										<div class="review-box message">
+
+											<input name="productId" value="@Model.Id" type="hidden">
+											<input name="name" value="@ViewBag.Username" type="hidden">
+											<textarea name="comment" placeholder="Write your review"></textarea>
+										</div>
+									</div>
+									<div class="review-btn">
+
+										<button asp-action="Comment" asp-route-id="@Model.Id" class="btn btn-primary"
+												style="--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .20rem; --bs-btn-font-size: .75rem;">
+											Yorum Elave Et
+										</button>
+									</div>
+								</form>
+							}
+						</div>
+					</div>
+					<!-- End Single Content -->
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
-@* @section scripts{
-    <script>
-        $(".product__small__images").click(function(){
-            alert();
-        }
-    </script>
-} *@
+@section scripts {
+	<script>
+		$('.small__images__m').click(function () {
+			alert();
+		})
+	</script>
+}

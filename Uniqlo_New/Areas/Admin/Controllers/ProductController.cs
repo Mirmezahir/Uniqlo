@@ -9,19 +9,19 @@ using Uniqlo_New.ViewModels.Product;
 
 namespace Uniqlo_New.Areas.Admin.Controllers
 {
-		[Area("Admin")]
-    [Authorize(Roles = nameof(Roles.Admin))]
-    public class ProductController(IWebHostEnvironment _env, UniqloDBContextBp215 _context) : Controller
+	[Area("Admin")]
+	[Authorize(Roles = nameof(Roles.Admin))]
+	public class ProductController(IWebHostEnvironment _env, UniqloDBContextBp215 _context) : Controller
 	{
 		public async Task<IActionResult> Index()
 		{
 
-			return View(await _context.Products.Where(x=> x.IsDeleted==false).Include(x=>x.Category).ToListAsync());
+			return View(await _context.Products.Where(x => x.IsDeleted == false).Include(x => x.Category).ToListAsync());
 		}
 		[HttpGet]
 		public async Task<IActionResult> Create()
 		{
-			ViewBag.Categories= await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();	
+			ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
 
 			return View();
 		}
@@ -29,21 +29,21 @@ namespace Uniqlo_New.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Create(ProductCreateVM vm)
 		{
-			//if (vm.OtherFiles!=null && vm.OtherFiles.Any())
-			//{
-			//	if (!vm.OtherFiles.All(x=>x.IsValidType("image")))
-			//	{
-			//		var filenames =vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName);
-			//		ModelState.AddModelError("OtherFiles", string.Join(", ", filenames)+"are is not an image");
-			//		string.Join(", ", filenames);	
-			//	}
+			if (vm.OtherFiles != null && vm.OtherFiles.Any())
+			{
+				if (!vm.OtherFiles.All(x => x.IsValidType("image")))
+				{
+					var filenames = vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName);
+					ModelState.AddModelError("OtherFiles", string.Join(", ", filenames) + "are is not an image");
+					string.Join(", ", filenames);
+				}
 
-			//}
+			}
 			if (vm.CoverFile != null)
 			{
-				if (vm.CoverFile.IsValidType("image")==false)
+				if (vm.CoverFile.IsValidType("image") == false)
 				{
-					
+
 					ModelState.AddModelError("CoverFile", "File type must be image");
 				}
 				if (!vm.CoverFile.IsValidSize(300))
@@ -52,21 +52,32 @@ namespace Uniqlo_New.Areas.Admin.Controllers
 				}
 			}
 			if (!ModelState.IsValid) { ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync(); return View(); }
-			Product product = vm;
+			Product product = new Product
+			{
+				Name = vm.Name,
+				CategoryId = vm.CategoryId,
+				Description = vm.Description,
+				SellPrice = vm.SellPrice,
+				CostPrice = vm.CostPrice,
+				Quantity = vm.Quantity,
+				Discount = vm.Discount,
+				CoverImage = await vm.CoverFile!.UploadAsync(_env.WebRootPath, "imgs", "products"),
+				Images = vm.OtherFiles.Select(x => new ProductImage { FileUrl = x.UploadAsync(_env.WebRootPath, "imgs", "products").Result }).ToList()
+			};
 			product.CoverImage = await vm.CoverFile!.UploadAsync(_env.WebRootPath, "imgs", "products");
 			await _context.Products.AddAsync(product);
 			await _context.SaveChangesAsync();
 			return RedirectToAction(nameof(Index));
 		}
-		public async Task<IActionResult> Delete(int?id)
+		public async Task<IActionResult> Delete(int? id)
 		{
 			if (!id.HasValue) { return BadRequest(); }
 			Product product = await _context.Products.FindAsync(id);
-			product.IsDeleted= true;
+			product.IsDeleted = true;
 			_context.Update(product);
 			await _context.SaveChangesAsync();
 			return RedirectToAction(nameof(Index));
-			
+
 
 
 		}

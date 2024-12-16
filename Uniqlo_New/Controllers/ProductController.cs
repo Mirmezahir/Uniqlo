@@ -58,6 +58,10 @@ namespace Uniqlo_New.Controllers
 		}
 		public async Task<IActionResult> Comment(int productId,string comment,string name)
 		{
+			if (string.IsNullOrEmpty(comment))
+			{
+				return RedirectToAction(nameof(Details), new {Id=productId });
+			}
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
 			var data = await _contex.ProductComments.Where(x=> x.UserId==userId&& x.ProductId==productId).FirstOrDefaultAsync();
 			await _contex.ProductComments.AddAsync(new Models.ProductComment { 
@@ -72,4 +76,5 @@ namespace Uniqlo_New.Controllers
 			return RedirectToAction(nameof(Details), new { Id = productId });
 		}
 	}
+
 }

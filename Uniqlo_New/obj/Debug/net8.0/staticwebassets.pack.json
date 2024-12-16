@@ -8425,24 +8425,88 @@
       "PackagePath": "staticwebassets\\imgs\\295128.png"
     },
     {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\Untitled design.png",
+      "PackagePath": "staticwebassets\\imgs\\Untitled design.png"
+    },
+    {
       "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\default-profile-account-unknown-icon-black-silhouette-free-vector.jpg",
       "PackagePath": "staticwebassets\\imgs\\default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\033bvp0l.4gr.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\033bvp0l.4gr.webp"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\0igunoyk.n52.png",
+      "PackagePath": "staticwebassets\\imgs\\products\\0igunoyk.n52.png"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\1eeysubb.21m.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\1eeysubb.21m.webp"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\3tcm1np1.zmh.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\3tcm1np1.zmh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\dr1q4ann.d2p.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\dr1q4ann.d2p.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\ewg334ng.dgr.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\ewg334ng.dgr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\i0pmyihd.5hi.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\i0pmyihd.5hi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\l2uwczkx.dya.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\l2uwczkx.dya.webp"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\lckznbyn.iaa.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\lckznbyn.iaa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\p2fg3sm2.m45.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\p2fg3sm2.m45.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\qqjdn440.qlo.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\qqjdn440.qlo.jpg"
     },
     {
       "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\t0dzzqnh.4at.jpg",
       "PackagePath": "staticwebassets\\imgs\\products\\t0dzzqnh.4at.jpg"
     },
     {
-      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\sliders\\bofcemq2.5vi.webp",
-      "PackagePath": "staticwebassets\\imgs\\sliders\\bofcemq2.5vi.webp"
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\u3aqy5m0.0ol.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\u3aqy5m0.0ol.webp"
     },
     {
-      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\sliders\\mdatlyrk.kwl.jpg",
-      "PackagePath": "staticwebassets\\imgs\\sliders\\mdatlyrk.kwl.jpg"
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\xxhpfqr0.py0.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\xxhpfqr0.py0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\yz0qcssm.ldf.png",
+      "PackagePath": "staticwebassets\\imgs\\products\\yz0qcssm.ldf.png"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\products\\zyo02v1g.qnp.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\zyo02v1g.qnp.webp"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\sliders\\kskuw3el.ovp.webp",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\kskuw3el.ovp.webp"
     },
     {
       "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\sliders\\v2brtyzl.wih.jpg",
       "PackagePath": "staticwebassets\\imgs\\sliders\\v2brtyzl.wih.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\sliders\\xzigk3wx.xrq.webp",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\xzigk3wx.xrq.webp"
     },
     {
       "Id": "C:\\Users\\HUAWEI\\source\\repos\\Uniqlo_New\\Uniqlo_New\\wwwroot\\imgs\\unnamed.png",

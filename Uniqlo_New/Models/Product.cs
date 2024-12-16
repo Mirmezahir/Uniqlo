@@ -15,9 +15,9 @@ namespace Uniqlo_New.Models
 		public string CoverImage { get; set; } = null!;
 		public int?  CategoryId { get; set; }
 		public Category? Category { get; set; }
-		public IEnumerable<Product>? Images { get; set; }
-		public IEnumerable<ProductRating>? Ratings { get; set; }
-		public IEnumerable<ProductComment>? Comments { get; set; }
+		public ICollection<ProductImage>? Images { get; set; }
+		public ICollection<ProductRating>? Ratings { get; set; }
+		public ICollection<ProductComment>? Comments { get; set; }
         public  ICollection<Tag>? Tags { get; set; }
 
         public static implicit operator Product(ProductCreateVM vm)

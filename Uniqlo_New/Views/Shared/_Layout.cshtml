@@ -23,9 +23,10 @@
     <link rel="stylesheet" href="~/assets/css/responsive.css">
     <!-- User style -->
     <link rel="stylesheet" href="~/assets/css/custom.css">
-
+       
     <!-- Modernizr JS -->
     <script src="~/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    @await RenderSectionAsync("styles",false);
 </head>
 
 <body>
@@ -488,7 +489,7 @@
     <script src="~/assets/js/plugins.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="~/assets/js/main.js"></script>
-    @await RenderSectionAsync("script",false);
+    @await RenderSectionAsync("scripts",false);
 
 </body>
 

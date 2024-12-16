@@ -27,9 +27,11 @@
 				<label asp-for="CoverFile"></label>
 				<input asp-for="CoverFile" class="form-control">
 				<span asp-validation-for="CoverFile" class="text-small text-danger"></span>
-
-
 				
+					<label asp-for="OtherFiles"></label>
+					<input accept="image/*" asp-for="OtherFiles" class="form-control">
+					<span asp-validation-for="OtherFiles" class="text-small text-danger"></span>
+			
 			</div>
 			<div class="form-row">
 				<div class="form-group col">
